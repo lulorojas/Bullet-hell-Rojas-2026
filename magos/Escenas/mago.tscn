@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b5pacamcp0ws8"]
+
+[ext_resource type="Texture2D" uid="uid://bkn3hwwm55eh1" path="res://Assets/wizard/2_WALK_000.png" id="1_23idm"]
+[ext_resource type="Texture2D" uid="uid://doy2dvrunq6lm" path="res://Assets/wizard/2_WALK_001.png" id="2_uyhod"]
+[ext_resource type="Texture2D" uid="uid://b26l1xkcjshl4" path="res://Assets/wizard/2_WALK_002.png" id="3_6wv11"]
+[ext_resource type="Texture2D" uid="uid://b7rmkm1cyt2nk" path="res://Assets/wizard/2_WALK_003.png" id="4_o60lm"]
+[ext_resource type="Texture2D" uid="uid://bl4au26gwybtx" path="res://Assets/wizard/2_WALK_004.png" id="5_kdq1p"]
+[ext_resource type="Texture2D" uid="uid://dvohoik7bpdu7" path="res://Assets/wizard/1_IDLE_000.png" id="6_cf8lp"]
+[ext_resource type="Texture2D" uid="uid://d1hdrewt17c1" path="res://Assets/wizard/1_IDLE_001.png" id="7_647tt"]
+[ext_resource type="Texture2D" uid="uid://4c54j0lfp3oh" path="res://Assets/wizard/1_IDLE_002.png" id="8_fxue3"]
+[ext_resource type="Texture2D" uid="uid://cq16eey77e5hw" path="res://Assets/wizard/1_IDLE_004.png" id="9_qrvfq"]
+[ext_resource type="Texture2D" uid="uid://cmlh7ak5reto1" path="res://Assets/wizard/1_IDLE_003.png" id="10_850uq"]
+[ext_resource type="Script" uid="uid://cpie43tdlicc0" path="res://Scripts/movimiento.gd" id="11_iegci"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1bvh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_23idm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uyhod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6wv11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o60lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kdq1p")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cf8lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_647tt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fxue3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qrvfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_850uq")
+}],
+"loop": true,
+"name": &"quieto",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23idm"]
+size = Vector2(149, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyhod"]
+
+[node name="Mago" type="CharacterBody2D" unique_id=1972755322]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=127341911]
+unique_name_in_owner = true
+position = Vector2(125.125, 167.5)
+scale = Vector2(0.5885014, 0.6885714)
+sprite_frames = SubResource("SpriteFrames_s1bvh")
+animation = &"quieto"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46355108]
+position = Vector2(114, 173)
+shape = SubResource("RectangleShape2D_23idm")
+
+[node name="Movimiento" type="Node" parent="." unique_id=1251985745]
+script = ExtResource("11_iegci")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=977482867]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=2048632277]
+shape = SubResource("RectangleShape2D_uyhod")

@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://b0plcervhuapc"]
 
-[ext_resource type="Texture2D" uid="uid://d27xlw68x7c1a" path="res://Assets/descarga.jpeg" id="1_37v8n"]
+[ext_resource type="Texture2D" uid="uid://b5by45v8jsna4" path="res://Assets/Fondos/Combate1.png" id="1_37v8n"]
+[ext_resource type="PackedScene" uid="uid://b5pacamcp0ws8" path="res://Escenas/mago.tscn" id="2_k00ba"]
 
-[node name="Node2D" type="Node2D" unique_id=1872637834]
+[node name="Principal" type="Node2D" unique_id=1872637834]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=426376404]
-position = Vector2(333.24997, 198.75)
-scale = Vector2(2.1949997, 2.330357)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1422567735]
+z_index = 10
+position = Vector2(833.00006, 434.00003)
+scale = Vector2(0.5929944, 0.66959643)
 texture = ExtResource("1_37v8n")
+
+[node name="Mago" parent="Sprite2D" unique_id=1972755322 instance=ExtResource("2_k00ba")]
