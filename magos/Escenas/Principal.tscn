@@ -47,15 +47,15 @@ b = Vector2(735, -85)
 a = Vector2(660, -349)
 b = Vector2(540, -417)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2uodn"]
+a = Vector2(520, 63)
+b = Vector2(500, 213)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_k00ba"]
 radius = 84.38009
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3gyp"]
 size = Vector2(101, 43)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_2uodn"]
-a = Vector2(520, 63)
-b = Vector2(500, 213)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_xre0a"]
 a = Vector2(412, 242)
@@ -73,7 +73,7 @@ texture = ExtResource("1_k00ba")
 position = Vector2(730, -9)
 scale = Vector2(0.41669634, 0.530599)
 
-[node name="Limites" type="StaticBody2D" parent="." unique_id=1463833753]
+[node name="Limites" type="StaticBody2D" parent="." unique_id=1463833753 groups=["obstaculos"]]
 position = Vector2(195, 84)
 
 [node name="EsquinaIzquierdaInferior" type="CollisionShape2D" parent="Limites" unique_id=969053812]
@@ -111,17 +111,20 @@ shape = SubResource("SegmentShape2D_ck4vd")
 [node name="ParedDerecha5" type="CollisionShape2D" parent="Limites" unique_id=237361793]
 shape = SubResource("SegmentShape2D_u6nrg")
 
-[node name="Agua" type="CollisionShape2D" parent="Limites" unique_id=529980411]
-position = Vector2(400, 150)
-shape = SubResource("CircleShape2D_k00ba")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1210303806]
 
-[node name="Agua2" type="CollisionShape2D" parent="Limites" unique_id=633901606]
-position = Vector2(463.5, 44.5)
-shape = SubResource("RectangleShape2D_f3gyp")
-
-[node name="Agua3" type="CollisionShape2D" parent="Limites" unique_id=1301496008]
+[node name="Agua3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1301496008]
+position = Vector2(195, 84)
 shape = SubResource("SegmentShape2D_2uodn")
 
-[node name="Agua4" type="CollisionShape2D" parent="Limites" unique_id=77044569]
-position = Vector2(-2, 2)
+[node name="Agua" type="CollisionShape2D" parent="StaticBody2D" unique_id=529980411]
+position = Vector2(595, 234)
+shape = SubResource("CircleShape2D_k00ba")
+
+[node name="Agua2" type="CollisionShape2D" parent="StaticBody2D" unique_id=633901606]
+position = Vector2(658.5, 128.5)
+shape = SubResource("RectangleShape2D_f3gyp")
+
+[node name="Agua4" type="CollisionShape2D" parent="StaticBody2D" unique_id=77044569]
+position = Vector2(193, 86)
 shape = SubResource("SegmentShape2D_xre0a")
