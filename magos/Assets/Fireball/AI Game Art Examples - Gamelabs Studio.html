@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://gamelabstudio.co/examples -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Game Art Examples - Gamelabs Studio</title><meta name="description" content="Browse example AI-generated game sprites, animations, spritesheets, and tileable textures. Pixel art, photorealistic, and stylized assets ready for Unity, Godot, and any 2D engine."><meta name="theme-color" content="#111827"><style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 7 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 7 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 7 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 7 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 7 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-slab-regular: normal 400 1em/1 "Font Awesome 7 Slab";
+  --fa-font-slab-press-regular: normal 400 1em/1 "Font Awesome 7 Slab Press";
+  --fa-font-whiteboard-semibold: normal 600 1em/1 "Font Awesome 7 Whiteboard";
+  --fa-font-thumbprint-light: normal 300 1em/1 "Font Awesome 7 Thumbprint";
+  --fa-font-notdog-solid: normal 900 1em/1 "Font Awesome 7 Notdog";
+  --fa-font-notdog-duo-solid: normal 900 1em/1 "Font Awesome 7 Notdog Duo";
+  --fa-font-etch-solid: normal 900 1em/1 "Font Awesome 7 Etch";
+  --fa-font-jelly-regular: normal 400 1em/1 "Font Awesome 7 Jelly";
+  --fa-font-jelly-fill-regular: normal 400 1em/1 "Font Awesome 7 Jelly Fill";
+  --fa-font-jelly-duo-regular: normal 400 1em/1 "Font Awesome 7 Jelly Duo";
+  --fa-font-chisel-regular: normal 400 1em/1 "Font Awesome 7 Chisel";
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285714em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left,
+.svg-inline--fa .fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-pull-right,
+.svg-inline--fa .fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xs {
+  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-sm {
+  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-lg {
+  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xl {
+  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-2xl {
+  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+/* Heads Up: Bordered Icons will not be supported in the future!
+  - This feature will be deprecated in the next major release of Font Awesome (v8)!
+  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+*/
+/* Notes:
+* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+* --@{v.$css-prefix}-border-padding =
+  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+*/
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, 0.1875em 0.25em);
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right,
+.fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff);
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  --fa-width: 1.25em;
+  height: 1em;
+  width: var(--fa-width);
+}
+.svg-inline--fa.fa-stack-2x {
+  --fa-width: 2.5em;
+  height: 2em;
+  width: var(--fa-width);
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  z-index: var(--fa-stack-z-index, auto);
+}</style><link rel="canonical" href="https://gamelabstudio.co/examples"><meta property="og:site_name" content="Gamelabs Studio"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta name="application-name" content="Gamelabs Studio"><script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Gamelabs Studio",
+      "alternateName": ["Gamelabs", "GameLab Studio"],
+      "url": "https://gamelabstudio.co",
+      "description": "Generate transparent game sprites, animations, and spritesheets with AI. Multi-angle coherence, pixel-perfect output, and a built-in image editor.",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Web",
+      "image": "https://gamelabstudio.co/og-image.png",
+      "screenshot": "https://gamelabstudio.co/asset_page.png",
+      "featureList": [
+        "AI sprite generation",
+        "AI animation generation",
+        "Spritesheet export",
+        "Multi-angle coherent views",
+        "Pixel-perfect native resolution",
+        "Transparent background output",
+        "Tileable texture generation",
+        "Built-in image editor with layers and generative fill",
+        "REST API and MCP integration"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free tier with 20 credits"
+      }
+    }</script><meta property="og:image" content="https://gamelabstudio.co/og-image.png"><meta name="twitter:card" content="summary_large_image"><link rel="apple-touch-icon" sizes="180x180" href="https://gamelabstudio.co/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gamelabstudio.co/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gamelabstudio.co/favicon-16x16.png"><link rel="manifest" href="https://gamelabstudio.co/site.webmanifest"><link rel="stylesheet" href="./AI Game Art Examples - Gamelabs Studio_files/all.min.css" media="all" onload="this.media=&quot;all&quot;"><noscript><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@7.0.1/css/all.min.css"></noscript><!-- Google tag (gtag.js) --><script async="" src="./AI Game Art Examples - Gamelabs Studio_files/js"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-PZ5RBKL8MD")</script><!-- Google Identity Services --><script src="./AI Game Art Examples - Gamelabs Studio_files/client" async="" defer=""></script><script type="module" async="" crossorigin="" src="./AI Game Art Examples - Gamelabs Studio_files/app-DJrEM0k0.js"></script><link rel="stylesheet" crossorigin="" href="./AI Game Art Examples - Gamelabs Studio_files/app-sINZ8c8y.css"><link rel="modulepreload" crossorigin="" href="https://gamelabstudio.co/assets/PublicLayout-DHP5Izrc.js"><link rel="modulepreload" crossorigin="" href="https://gamelabstudio.co/assets/Examples-BT3I9NUQ.js"><link rel="stylesheet" href="./AI Game Art Examples - Gamelabs Studio_files/Examples-Bs8kPbBb.css"><link rel="modulepreload" crossorigin="" href="https://gamelabstudio.co/assets/Inspector-Cgd2SC8Y.js"><link rel="stylesheet" href="./AI Game Art Examples - Gamelabs Studio_files/Inspector-BhOXsX95.css"><meta name="robots" content="index, follow"><style id="googleidentityservice_button_styles">.qJTHM{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:"Roboto-Regular",arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{overflow-wrap:break-word;word-break:break-word}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-u2z5K{height:36px;width:36px}.Bz112c-uaxL4e{border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf{border:none;margin:0;padding:0}.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u{-webkit-transition:height linear .2s;transition:height linear .2s}.P1ekSe-ZMv3u>div:nth-child(1){background-color:#1a73e8!important;-webkit-transition:width linear .3s;transition:width linear .3s}.P1ekSe-ZMv3u>div:nth-child(2){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#1a73e8,#1a73e8)!important}.P1ekSe-ZMv3u>div:nth-child(3){background-image:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,.7)),to(rgba(255,255,255,.7))),-webkit-gradient(linear,left top,right top,from(#1a73e8),to(#1a73e8))!important;background-image:-webkit-linear-gradient(left,rgba(255,255,255,.7),rgba(255,255,255,.7)),-webkit-linear-gradient(left,#1a73e8,#1a73e8)!important;background-image:linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:"Google Sans",arial,sans-serif;font-size:14px;height:40px;letter-spacing:.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}@media screen and (preferes-contrast:more){.nsm7Bb-HzV7m-LgbsSe{color:#000}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{color:#fff}}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;-webkit-box-flex:1;flex-grow:1;font-family:"Google Sans",arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;-webkit-box-flex:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:hover,.nsm7Bb-HzV7m-LgbsSe:focus{box-shadow:none;border-color:rgb(210,227,252);outline:none}.nsm7Bb-HzV7m-LgbsSe:focus-within{outline:2px solid #00639b;border-color:transparent}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.08)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:"Roboto";font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#000;fill:#000}}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style><link rel="modulepreload" as="script" crossorigin="" href="https://gamelabstudio.co/assets/gamelab_logo_small-BEYqrTvZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gamelabstudio.co/assets/referer-BtwMDysf.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gamelabstudio.co/assets/image-BtaQI_rq.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gamelabstudio.co/assets/video-DF4nmmxY.js"><link rel="modulepreload" as="script" crossorigin="" href="https://gamelabstudio.co/assets/spritesheet-D9kWQT5a.js"><meta property="og:title" content="AI Game Art Examples - Gamelabs Studio"><meta property="og:description" content="Browse example AI-generated game sprites, animations, spritesheets, and tileable textures. Pixel art, photorealistic, and stylized assets ready for Unity, Godot, and any 2D engine."><meta property="og:url" content="https://gamelabstudio.co/examples"><meta name="twitter:title" content="AI Game Art Examples - Gamelabs Studio"><meta name="twitter:description" content="Browse example AI-generated game sprites, animations, spritesheets, and tileable textures. Pixel art, photorealistic, and stylized assets ready for Unity, Godot, and any 2D engine."><meta name="twitter:image" content="https://gamelabstudio.co/og-image.png"><script id="ld-json-seo" type="application/ld+json">[{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gamelabstudio.co/"},{"@type":"ListItem","position":2,"name":"Examples","item":"https://gamelabstudio.co/examples"}]}]</script></head><body class="bg-gray-950"><div id="app" data-server-rendered="true" data-v-app=""><div data-v-1fbdc7bc="" class="min-h-screen bg-gray-900 text-white flex flex-col"><header class="sticky top-0 z-20 border-b border-gray-700/80 backdrop-blur bg-gray-900/60"><div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="https://gamelabstudio.co/" class="router-link-active flex items-center gap-2 font-bold text-xl"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAwBQTFRFAAAAg2D/G/GChV7/g13+HvF/IPKDgFz9f2L7gl75hV/8iGD/HfCAH+9+fGb5iWT/jmX/ZofiJOuEemr2He5+kin/JfaEhFb4jWH/HfV6KfGEOtaSfVf4gmL4g1/4eFjyLd6TgV74d1L1gk/6I/F8d3H0gG3xfDv2IuN4Yo3gN96agW3yhGr8f2H1KuWMIOh5H+R3H+N3f172IOR3L+KEIeR4f2Hzbn3sMe2RIOZ5LOSCgmT2ZIDXQs+hX4nKMuyeamXiLuKEIeV4KOR+ZnLaTaC3SL2pc1zlK+OCdkjrIeV6JeN8gGL1fmTygWjygGX0HOxyeGPtL/aJdXvmbH/faYzaQMSgYY3VTrSzMNqKYaDHG/GCg1//HPCBHfGChF//g17/HO+DG/KCG/CDHfCEhF7/G/CBG++CG++BHu6CgV39gV7/G/KBgl78G/KDHfKBgV77gVz7G/KAHO2BHeuAf178gV/9GvCBHeqAHel9Hu+Ag2H/G+t+Hu2AHOZ+HOh+f1z8HfKDG+l8HOt9hWH/gGD/HO1+G+l/hFz7G+2AHeiBG+5/HO2EHeaAG/SAHeSAg1z9G/B/HuaCgF3+HuqDgVz+GvOBIe+Gfl76GvaBI92KHuSDG/SDgFv9HPaCG+uBIOKGIOSFIfOFJtiTIeCJJdqOI+6CfGP6HuKCJN2NH+GEh1//fmD+Id+GLNKdKtOZcnLuJduRO8C0XJTYd2rzI+SIhlv+eWX1fWL9dG3wIvKAUp/NM8moQLm6X4/bhFj+TqXJKdiXLs+eIPaHL86iRrDAPrq1cHbrNsWrKNWVOcGvIOeFbXjoJeGLYondVZ7SMsqkaILjSarEa37nIfaBVpfSfGD3Mc6nG/93Hfh+QrO7Sa/GQ7e/OMWwG+t8TKrKNcmtUaXPPr+6Hv5/iCn/jTT/WZnXKtabiUn9iFT+aH7jI/KKLtKiI/93g03+ikD+JPh7JeyKIf9wRrTDhDn+IPyGgFX+G/p4J/1+kxz/W4zXGf5rhxj/Kv6GN92mQNCyyuS7tQAAAAF0Uk5TAEDm2GYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfqBAUTJCEatChnAAACtElEQVRIx+3Tz2vaYBgH8JgKySEUuu466MWLB6968bp/QASRvCZvSd0MC61NFCvRHBx1FGqlDDZ0h0I9rGUbXe0ooyusoxstuo12hx0cdNvB/QG7m71vjJ0dTWpy6mFfJAkmnzzP+yMEYZ1KhXCXJ27hrFvoLm4HOF9xKSsVY2pYznnJeXTgXEAjHDfjDo7NjBHXOx4cdhBu5Am6P6SMOJjMC87BkrBYZr1eL8+zXq+jBWRZHp95nne2kpw5MgQ5h5A3KqLCLOGqVQeLcaFV5NxBjued7dbBsnsctvp3u3CO1h/vOI95yTn4mD1ZlKHRcp4RYZam6QvzNGJJOtj83H3bHe6bHsVFfx5+/b693/nRPNkyZTYzNQL8tb5+8OLwzfa3s+5E+/XkOP0s89j36mr3sdFo1DZeHrw7+vB+rznR3trZ2d3ttFpXudYqSr2+1tg4PjzaP91rfjppf4mtLuVS9i6l5MrlsqYVl1c2a8e46mnn9tSSpspywhbKsqKoN2IdXS0WV55uPq811urLWk5dlAGwc/DOXVmWY3OZOb+2gOriaA91PY8caVMyBWAfzlE9VS2VFhDWctFqOgoQtJH4riAIv0WRChduKoiWVNWfliTJbwshuitEJ4K0KIqTwWBcUVVFyQVoSboVwtBS4n7CVdEIRWUihUVFCQQKesSnG62S5OVOwDd7CFIGpCJyoRB/IMULqRTsO4uSCAIgRIORcQR9kchZXg6lJTHtx64vpy+FCXA+OZQYFiCUZTwxVT80GUkCC0ji+wDGEOwZVVLxajo+6NN6dswXQ11E/aG3AMDAUGjIWcGE+cQjPabjcxIYYzMaATaOyA9eDSHETyb7jDSZzQ7Ik8MBySQA5wiFsd6sefAPNS+mUe7Zf1cMnlsmkUgwDPrhA0DLNIv+IP7nGucPXVwjiov5EwwAAAAASUVORK5CYII=" alt="Gamelabs logo" class="h-7 w-auto"><span>Gamelabs</span><span class="studio-tag hidden md:inline">STUDIO</span></a><nav class="hidden md:flex items-center gap-6 text-sm"><a aria-current="page" href="https://gamelabstudio.co/examples" class="router-link-active router-link-exact-active hover:text-indigo-400">Examples</a><a href="https://gamelabstudio.co/pricing" class="hover:text-indigo-400">Pricing</a><a href="https://gamelabstudio.co/docs/api" class="hover:text-indigo-400">API</a><a href="https://gamelabstudio.co/blog" class="hover:text-indigo-400">Blog</a><a href="https://gamelabstudio.co/faq" class="hover:text-indigo-400">FAQ</a></nav><div class="flex items-center gap-2 sm:gap-3"><a href="https://gamelabstudio.co/login" class="btn btn-outline text-xs sm:text-sm whitespace-nowrap px-2.5 py-1.5 sm:px-3 sm:py-1.5"><i class="fa-solid fa-right-to-bracket"></i>Sign in</a><a href="https://gamelabstudio.co/signup" class="btn btn-primary text-xs sm:text-sm whitespace-nowrap px-2.5 py-1.5 sm:px-3 sm:py-1.5"><i class="fa-solid fa-rocket"></i>Get started</a></div></div></header><main class="flex-1"><div data-v-29fd5b4b="" class="relative text-white"><div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden" data-v-29fd5b4b=""><div class="animated-gradient absolute -inset-[20%] opacity-20" data-v-29fd5b4b=""></div></div><div aria-hidden="true" class="pixel-bg-wrap pointer-events-none fixed inset-0 z-0 overflow-hidden" data-v-29fd5b4b=""><div class="pixel-bg-canvas" data-v-29fd5b4b=""></div><div class="pixel-bg-grid" data-v-29fd5b4b=""></div></div><div data-v-29fd5b4b="" class="relative max-w-6xl mx-auto px-6 py-16"><div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-2" data-v-29fd5b4b=""><div class="space-y-4" data-v-29fd5b4b=""><div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-pill text-xs font-semibold text-indigo-300 uppercase tracking-wider" data-v-29fd5b4b=""><i class="fa-solid fa-shapes" data-v-29fd5b4b=""></i> Examples Gallery </div><h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight" data-v-29fd5b4b=""> From <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" data-v-29fd5b4b="">prompt</span> to <span class="bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent" data-v-29fd5b4b="">game-ready</span></h1><p class="text-gray-400 max-w-2xl" data-v-29fd5b4b=""> See how Gamelabs turns prompts and reference art into production-ready <span class="font-semibold text-white" data-v-29fd5b4b="">images, animations, and spritesheets</span>. </p></div><div class="flex flex-wrap gap-2 text-xs text-gray-300" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-3 py-1.5" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px] text-emerald-300" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Image</span></span><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-3 py-1.5" data-v-29fd5b4b=""><i class="fa-solid fa-clapperboard text-[10px] text-sky-300" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Animation</span></span><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-3 py-1.5" data-v-29fd5b4b=""><i class="fa-solid fa-border-all text-[10px] text-violet-300" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Spritesheet</span></span></div></div><div data-v-29fd5b4b="" class="mt-14 space-y-14"><section data-v-29fd5b4b=""><div data-v-29fd5b4b="" class="flex items-center justify-between gap-3"><div data-v-29fd5b4b=""><h2 data-v-29fd5b4b="" class="text-xl font-bold text-white">Air capitalship</h2><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Stylized airship unit, shown across the full image → animation → spritesheet workflow. </p></div></div><div data-v-29fd5b4b="" class="mt-5 grid md:grid-cols-3 gap-6 lg:gap-8"><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-emerald group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/air_capitalship-Dt6xQsod.png" alt="Air capitalship image" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-emerald-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Image</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Air capitalship concept</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Detailed concept art with chromakey background for clean compositing. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-sky group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><video data-v-29fd5b4b="" src="/assets/air_capitalship-Bt42LbH7.mp4" class="h-full w-full object-contain" autoplay="" loop="" playsinline=""></video><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-sky-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-clapperboard text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Animation</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Air capitalship animation</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Loopable, engine-ready animation that keeps the ship weighty and readable at small sizes. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-violet group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/air_capitalship_sprite-BRHIcbb8.png" alt="Air capitalship spritesheet" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-violet-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-border-all text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Spritesheet</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Air capitalship spritesheet</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Packed frames with transparency and padding tuned for fast import into common 2D engines. </p></div></div></div></section><section data-v-29fd5b4b=""><div data-v-29fd5b4b="" class="flex items-center justify-between gap-3"><div data-v-29fd5b4b=""><h2 data-v-29fd5b4b="" class="text-xl font-bold text-white">Fireball projectile</h2><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> A fiery projectile effect from concept art through animation to a ready-to-use spritesheet. </p></div></div><div data-v-29fd5b4b="" class="mt-5 grid md:grid-cols-3 gap-6 lg:gap-8"><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-emerald group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/fireball_image-DEFpzDd7.png" alt="Fireball image" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-emerald-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Image</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Fireball concept</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Stylized fireball with chromakey background, ready for compositing into any scene. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-sky group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><video data-v-29fd5b4b="" src="/assets/fireball_animation-E6jnJv47.mp4" class="h-full w-full object-contain" autoplay="" loop="" playsinline=""></video><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-sky-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-clapperboard text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Animation</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Fireball animation</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Loopable flame animation seeded from the concept image for consistent style and motion. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-violet group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/fireball_spritesheet-z9-rWDSC.png" alt="Fireball spritesheet" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-violet-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-border-all text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Spritesheet</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Fireball spritesheet</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Frames arranged into a transparent grid, ready for engines like Unity or Godot. </p></div></div></div></section><section data-v-29fd5b4b=""><div data-v-29fd5b4b="" class="flex items-center justify-between gap-3"><div data-v-29fd5b4b=""><h2 data-v-29fd5b4b="" class="text-xl font-bold text-white">Mothership unit</h2><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> A single concept turned into a still image, an animation, and a ready-to-use spritesheet. </p></div></div><div data-v-29fd5b4b="" class="mt-5 grid md:grid-cols-3 gap-6 lg:gap-8"><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-emerald group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/image-YVg3sYem.png" alt="Mothership image sample" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-emerald-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Image</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Mothership concept art</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Prompted pixel art with chromakey background, ready to drop into your pipeline. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-sky group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><video data-v-29fd5b4b="" src="/assets/video-Cj2V5sX2.mp4" class="h-full w-full object-contain" autoplay="" loop="" playsinline=""></video><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-sky-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-clapperboard text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Animation</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Mothership startup animation</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Startup animation seeded from the concept image to keep style and silhouette consistent. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-violet group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/spritesheet-BPlxC5Jx.png" alt="Mothership spritesheet sample" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-violet-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-border-all text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Spritesheet</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Mothership spritesheet</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Converted frames into a padded grid with transparent background, ready for engines like Unity or Godot. </p></div></div></div></section><section data-v-29fd5b4b=""><div data-v-29fd5b4b="" class="flex items-center justify-between gap-3"><div data-v-29fd5b4b=""><h2 data-v-29fd5b4b="" class="text-xl font-bold text-white">Clockwork Dog unit</h2><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> A smaller unit with a strong silhouette that stays readable in isometric or top-down views. </p></div></div><div data-v-29fd5b4b="" class="mt-5 grid md:grid-cols-3 gap-6 lg:gap-8"><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-emerald group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/dog-X9VU937y.png" alt="Dog image" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-emerald-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Image</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Dog concept</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Clear chromakey background so your game can handle compositing and shadows. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-sky group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><video data-v-29fd5b4b="" src="/assets/dog-Cl6GAEto.mp4" class="h-full w-full object-contain" autoplay="" loop="" playsinline=""></video><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-sky-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-clapperboard text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Animation</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Dog walk cycle</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Loopable animation of the dog character with consistent volume and motion. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-violet group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/dog_spritesheet-T16SIUwq.png" alt="Dog spritesheet" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-violet-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-border-all text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Spritesheet</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Dog spritesheet</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Frames arranged into a tidy grid so you can plug directly into your game's animation system. </p></div></div></div></section><section data-v-29fd5b4b=""><div data-v-29fd5b4b="" class="flex items-center justify-between gap-3"><div data-v-29fd5b4b=""><h2 data-v-29fd5b4b="" class="text-xl font-bold text-white">Infantry unit</h2><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> A production-ready infantry unit with a clear concept, run cycle, and spritesheet for your strategy games. </p></div></div><div data-v-29fd5b4b="" class="mt-5 grid md:grid-cols-3 gap-6 lg:gap-8"><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-emerald group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/infantry-hL2rwiGG.png" alt="Infantry image" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-emerald-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Image</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Infantry concept</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Pixel art infantry unit with clean chromakey so you can handle shadows and ground interaction. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-sky group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><video data-v-29fd5b4b="" src="/assets/infantry-Dj14RXbN.mp4" class="h-full w-full object-contain" autoplay="" loop="" playsinline=""></video><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-sky-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-clapperboard text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Animation</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Infantry run cycle</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Loopable animation tuned for readability even when zoomed out on a busy map. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-violet group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/infantry_spritesheet-ClpiFEKu.png" alt="Infantry spritesheet" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-violet-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-border-all text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Spritesheet</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Infantry spritesheet</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Animation frames arranged into a grid with transparency and padding for flexible import. </p></div></div></div></section><section data-v-29fd5b4b=""><div data-v-29fd5b4b="" class="flex items-center justify-between gap-3"><div data-v-29fd5b4b=""><h2 data-v-29fd5b4b="" class="text-xl font-bold text-white">Tileable textures</h2><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Seamless textures you can repeat across large areas for environments, UI, and backgrounds. Click the puzzle icon in the inspector to see the texture tiling in action. </p></div></div><div data-v-29fd5b4b="" class="mt-5 grid md:grid-cols-3 gap-6 lg:gap-8"><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-emerald group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/grass-Dpz35Wen.png" alt="Grass tileable texture" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-emerald-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Tileable image</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Grass ground texture</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Seamless grass tile ideal for overworlds, arenas, and tactical maps. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-emerald group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/paper-DLERfDya.png" alt="Paper tileable texture" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-emerald-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Tileable image</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Paper background texture</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Subtle, repeating paper surface for UI panels, maps, and menu screens. </p></div></div><div data-v-29fd5b4b="" class="glass-card glass-specular example-card hover-glow-emerald group relative rounded-2xl overflow-hidden p-0"><div data-v-29fd5b4b="" class="relative aspect-video bg-checkerboard"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/water-BjsbvzHl.png" alt="Water tileable texture" class="h-full w-full object-contain"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition" data-v-29fd5b4b=""></div><div class="absolute top-2 left-2 flex gap-2" data-v-29fd5b4b=""><span class="inline-flex items-center gap-1.5 rounded-full glass-pill px-2.5 py-1 text-[11px] font-bold text-emerald-300 type-badge" data-v-29fd5b4b=""><i class="fa-solid fa-image text-[10px]" data-v-29fd5b4b=""></i><span data-v-29fd5b4b="">Tileable image</span></span></div><span class="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full glass-pill text-gray-400 group-hover:text-white transition-all duration-300" data-v-29fd5b4b=""><i class="fa-solid fa-arrow-up-right-from-square text-xs" data-v-29fd5b4b=""></i></span></div><div data-v-29fd5b4b="" class="p-5"><h3 data-v-29fd5b4b="" class="font-bold text-lg text-white">Water surface texture</h3><p data-v-29fd5b4b="" class="mt-1.5 text-sm text-gray-400 leading-relaxed"> Tileable water pattern for lakes, rivers, moats, and ocean tiles. </p></div></div></div></section><section data-v-29fd5b4b=""><div data-v-29fd5b4b="" class="grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-6 items-stretch"><div data-v-29fd5b4b="" class="relative w-full aspect-[16/9] overflow-hidden rounded-2xl"><video data-v-29fd5b4b="" src="/assets/ageofsteam-DPdjvxPq.mov" poster="/assets/aos_thumb_alt_border_blimp_artdeco-DMXHNm5z.png" class="w-full object-contain" autoplay="" loop="" playsinline=""></video></div><div data-v-29fd5b4b="" class="flex flex-col justify-center"><h2 data-v-29fd5b4b="" class="text-lg font-semibold">Age of Steam Tower Defence</h2><p data-v-29fd5b4b="" class="mt-2 text-sm text-gray-300"> A steampunk tower defence game built with this exact workflow: prompt images, generate animations, then export spritesheets for use in engine. </p><p data-v-29fd5b4b="" class="mt-2 text-sm text-gray-400"> Multiple enemy types, towers, and bosses were generated as consistent, multi-angle units so they feel like part of a single hand-crafted universe. </p><a data-v-29fd5b4b="" href="https://www.crazygames.com/game/age-of-steam-tower-defence" target="_blank" rel="noopener noreferrer"><img data-v-29fd5b4b="" src="./AI Game Art Examples - Gamelabs Studio_files/Play_CG_White-B4pmmmPy.svg" alt="Play on CrazyGames" class="mt-4 w-48 opacity-90"></a></div></div></section></div><div data-v-1bc4a329="" data-v-29fd5b4b="" class="fixed inset-0 bg-black z-50 p-3 md:p-4 flex flex-col"><div data-v-1bc4a329="" class="pb-2 space-y-2"><div data-v-1bc4a329="" class="flex items-center justify-between gap-2"><div data-v-1bc4a329="" class="text-sm text-gray-300"><span data-v-1bc4a329="" class="uppercase tracking-wider">Inspect</span><span data-v-1bc4a329="" class="mx-2">•</span><span data-v-1bc4a329="" class="text-gray-400">Spritesheet</span></div><button data-v-1bc4a329="" class="btn btn-icon btn-danger" aria-label="Close inspector" title="Close inspector"><svg data-v-1bc4a329="" class="svg-inline--fa fa-xmark" data-prefix="fas" data-icon="xmark" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"></path></svg></button></div><div data-v-1bc4a329="" class="flex flex-wrap items-center gap-2 justify-end sm:justify-between sm:gap-3"><div data-v-1bc4a329="" class="flex items-center gap-3 pr-3 border-r border-gray-700"><div data-v-ccb99b62="" data-v-1bc4a329="" class="ui-toggle-tabs" role="tablist" aria-orientation="horizontal"><button data-v-ccb99b62="" type="button" class="ui-toggle-tabs__item ui-toggle-tabs__item--active" role="tab" aria-selected="true"><span data-v-ccb99b62="" class="ui-toggle-tabs__label">Sheet</span></button><button data-v-ccb99b62="" type="button" class="ui-toggle-tabs__item" role="tab" aria-selected="false"><span data-v-ccb99b62="" class="ui-toggle-tabs__label">Preview</span></button></div><!----></div><div data-v-1bc4a329="" class="flex items-center gap-2"><button data-v-1bc4a329="" class="btn btn-secondary" aria-label="Zoom out" title="Zoom out"><svg data-v-1bc4a329="" class="svg-inline--fa fa-magnifying-glass-minus" data-prefix="fas" data-icon="magnifying-glass-minus" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM136 184c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"></path></svg></button><button data-v-1bc4a329="" class="btn btn-secondary" aria-label="Reset view" title="Reset view"><svg data-v-1bc4a329="" class="svg-inline--fa fa-arrows-rotate" data-prefix="fas" data-icon="arrows-rotate" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M65.9 228.5c13.3-93 93.4-164.5 190.1-164.5 53 0 101 21.5 135.8 56.2 .2 .2 .4 .4 .6 .6l7.6 7.2-47.9 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-128c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 53.4-11.3-10.7C390.5 28.6 326.5 0 256 0 127 0 20.3 95.4 2.6 219.5 .1 237 12.2 253.2 29.7 255.7s33.7-9.7 36.2-27.1zm443.5 64c2.5-17.5-9.7-33.7-27.1-36.2s-33.7 9.7-36.2 27.1c-13.3 93-93.4 164.5-190.1 164.5-53 0-101-21.5-135.8-56.2-.2-.2-.4-.4-.6-.6l-7.6-7.2 47.9 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 320c-8.5 0-16.7 3.4-22.7 9.5S-.1 343.7 0 352.3l1 127c.1 17.7 14.6 31.9 32.3 31.7S65.2 496.4 65 478.7l-.4-51.5 10.7 10.1c46.3 46.1 110.2 74.7 180.7 74.7 129 0 235.7-95.4 253.4-219.5z"></path></svg></button><button data-v-1bc4a329="" class="btn btn-secondary" aria-label="Zoom in" title="Zoom in"><svg data-v-1bc4a329="" class="svg-inline--fa fa-magnifying-glass-plus" data-prefix="fas" data-icon="magnifying-glass-plus" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 112c-13.3 0-24 10.7-24 24l0 48-48 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0 0 48c0 13.3 10.7 24 24 24s24-10.7 24-24l0-48 48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0 0-48c0-13.3-10.7-24-24-24z"></path></svg></button><button data-v-1bc4a329="" class="btn btn-secondary border-emerald-400 text-emerald-200 bg-emerald-500/20" aria-pressed="true" aria-label="Toggle boundary lines" title="Hide frame bounds"><svg data-v-1bc4a329="" class="svg-inline--fa fa-table-cells-large" data-prefix="fas" data-icon="table-cells-large" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M384 96l-128 0 0 128 128 0 0-128zm64 128l0 192c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 128zM64 288l0 128 128 0 0-128-128 0zm128-64l0-128-128 0 0 128 128 0zm64 64l0 128 128 0 0-128-128 0z"></path></svg><span data-v-1bc4a329="" class="hidden md:inline text-sm leading-none">Grid</span></button><!----></div></div></div><!----><div data-v-1bc4a329="" class="flex-1 rounded border border-gray-800 overflow-hidden bg-checkerboard"><div data-v-1bc4a329="" class="w-full h-full relative"><div data-v-1bc4a329="" class="absolute inset-0 overflow-hidden select-none cursor-grab active:cursor-grabbing"><div data-v-1bc4a329="" class="w-full h-full flex items-center justify-center"><div data-v-1bc4a329="" class="origin-center" style="transform: translate(-50px, -74px) scale(0.833333); --inspector-scale: 0.8333333333333334;"><div data-v-1bc4a329=""><!----><div data-v-1bc4a329="" class="inspector-image-wrapper"><img data-v-1bc4a329="" src="./AI Game Art Examples - Gamelabs Studio_files/fireball_spritesheet-z9-rWDSC.png" class="max-w-none inspector-media inspector-media--image inspector-bounds-visible" draggable="false"><!----></div></div></div></div></div></div></div><div data-v-1bc4a329="" class="pt-2 text-xs text-gray-400"> Scroll or pinch to zoom. Drag to pan. Double-click to reset. </div></div></div></div></main><footer class="border-t border-gray-700"><div class="max-w-6xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-4 text-sm text-gray-200"><div><div class="font-semibold text-white">Gamelabs Studio</div><p class="mt-2 text-gray-400">Generate coherent, multi-angle animations and transparent sprites right in Cursor or VSCode.</p></div><div><div class="font-semibold text-white">Product</div><ul class="mt-3 space-y-2"><li><a aria-current="page" href="https://gamelabstudio.co/examples" class="router-link-active router-link-exact-active hover:text-white">Examples</a></li><li><a href="https://gamelabstudio.co/pricing" class="hover:text-white">Pricing</a></li><li><a href="https://gamelabstudio.co/docs/api" class="hover:text-white">API Docs</a></li><li><a href="https://gamelabstudio.co/blog" class="hover:text-white">Blog</a></li><li><a href="https://gamelabstudio.co/faq" class="hover:text-white">FAQ</a></li></ul></div><div><div class="font-semibold text-white">Company</div><ul class="mt-3 space-y-2"><li><a class="hover:text-white" href="https://github.com/macuseri686" target="_blank" rel="noreferrer">GitHub</a></li></ul></div><div><div class="font-semibold text-white">Legal</div><ul class="mt-3 space-y-2"><li><a href="https://gamelabstudio.co/terms" class="hover:text-white">Terms</a></li><li><a href="https://gamelabstudio.co/privacy" class="hover:text-white">Privacy</a></li></ul></div></div><div class="border-t border-gray-700 text-xs text-gray-500 px-6 py-4"><div class="max-w-6xl mx-auto">© 2026 Gamelabs Studio. All rights reserved.</div></div></footer></div></div><audio class="audio-output" style="display: none;"></audio><div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div></body></html>

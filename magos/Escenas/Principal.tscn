@@ -3,12 +3,125 @@
 [ext_resource type="Texture2D" uid="uid://t7k1iyrm1vjv" path="res://Assets/Fondos/2cec7ybp65741.jpg" id="1_k00ba"]
 [ext_resource type="PackedScene" uid="uid://b5pacamcp0ws8" path="res://Escenas/mago.tscn" id="2_k00ba"]
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_k00ba"]
+a = Vector2(-138, -220)
+b = Vector2(121, 126)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_f3gyp"]
+a = Vector2(800, 550)
+b = Vector2(420, 547)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_05vgh"]
+a = Vector2(136, -371)
+b = Vector2(136, 151)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_87gwq"]
+a = Vector2(138, -374)
+b = Vector2(228, -390)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1s4wg"]
+a = Vector2(231, -389)
+b = Vector2(301, -315)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_03jm0"]
+a = Vector2(433, -416)
+b = Vector2(303, -314)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o44fx"]
+a = Vector2(768, 495)
+b = Vector2(587, 77)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4w22c"]
+a = Vector2(638, -53)
+b = Vector2(589, 74)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0nhm1"]
+a = Vector2(730, -78)
+b = Vector2(638, -55)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ck4vd"]
+a = Vector2(659, -353)
+b = Vector2(735, -85)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_u6nrg"]
+a = Vector2(660, -349)
+b = Vector2(540, -417)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k00ba"]
+radius = 84.38009
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3gyp"]
+size = Vector2(101, 43)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2uodn"]
+a = Vector2(520, 63)
+b = Vector2(500, 213)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xre0a"]
+a = Vector2(412, 242)
+b = Vector2(503, 211)
+
 [node name="Principal" type="Node2D" unique_id=1872637834]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1422567735]
-z_index = 10
+z_index = -1
 position = Vector2(651, 72)
 scale = Vector2(0.41669634, 0.530599)
 texture = ExtResource("1_k00ba")
 
-[node name="Mago" parent="Sprite2D" unique_id=1972755322 instance=ExtResource("2_k00ba")]
+[node name="Mago" parent="." unique_id=1972755322 instance=ExtResource("2_k00ba")]
+position = Vector2(730, -9)
+scale = Vector2(0.41669634, 0.530599)
+
+[node name="Limites" type="StaticBody2D" parent="." unique_id=1463833753]
+position = Vector2(195, 84)
+
+[node name="EsquinaIzquierdaInferior" type="CollisionShape2D" parent="Limites" unique_id=969053812]
+position = Vector2(273, 373)
+shape = SubResource("SegmentShape2D_k00ba")
+
+[node name="Piso" type="CollisionShape2D" parent="Limites" unique_id=1662507943]
+position = Vector2(-25, -52)
+shape = SubResource("SegmentShape2D_f3gyp")
+
+[node name="ParedIzquierda" type="CollisionShape2D" parent="Limites" unique_id=340754111]
+shape = SubResource("SegmentShape2D_05vgh")
+
+[node name="EsquinaIzquierdaSuperior" type="CollisionShape2D" parent="Limites" unique_id=500366370]
+shape = SubResource("SegmentShape2D_87gwq")
+
+[node name="EsquinasIzquierdaSuperior2" type="CollisionShape2D" parent="Limites" unique_id=243970787]
+shape = SubResource("SegmentShape2D_1s4wg")
+
+[node name="EsquinaIzquierdaSuperior3" type="CollisionShape2D" parent="Limites" unique_id=349940742]
+shape = SubResource("SegmentShape2D_03jm0")
+
+[node name="ParedDerecha" type="CollisionShape2D" parent="Limites" unique_id=2040989289]
+shape = SubResource("SegmentShape2D_o44fx")
+
+[node name="ParedDerecha2" type="CollisionShape2D" parent="Limites" unique_id=1642788455]
+shape = SubResource("SegmentShape2D_4w22c")
+
+[node name="ParedDerecha3" type="CollisionShape2D" parent="Limites" unique_id=846385608]
+shape = SubResource("SegmentShape2D_0nhm1")
+
+[node name="ParedDerecha4" type="CollisionShape2D" parent="Limites" unique_id=1279279208]
+shape = SubResource("SegmentShape2D_ck4vd")
+
+[node name="ParedDerecha5" type="CollisionShape2D" parent="Limites" unique_id=237361793]
+shape = SubResource("SegmentShape2D_u6nrg")
+
+[node name="Agua" type="CollisionShape2D" parent="Limites" unique_id=529980411]
+position = Vector2(400, 150)
+shape = SubResource("CircleShape2D_k00ba")
+
+[node name="Agua2" type="CollisionShape2D" parent="Limites" unique_id=633901606]
+position = Vector2(463.5, 44.5)
+shape = SubResource("RectangleShape2D_f3gyp")
+
+[node name="Agua3" type="CollisionShape2D" parent="Limites" unique_id=1301496008]
+shape = SubResource("SegmentShape2D_2uodn")
+
+[node name="Agua4" type="CollisionShape2D" parent="Limites" unique_id=77044569]
+position = Vector2(-2, 2)
+shape = SubResource("SegmentShape2D_xre0a")
