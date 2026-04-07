@@ -56,7 +56,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23idm"]
-size = Vector2(149, 192)
+size = Vector2(83, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyhod"]
 
@@ -64,13 +64,13 @@ size = Vector2(149, 192)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=127341911]
 unique_name_in_owner = true
-position = Vector2(125.125, 167.5)
-scale = Vector2(0.5885014, 0.6885714)
+position = Vector2(64.624985, 211)
+scale = Vector2(0.27583984, 0.43999994)
 sprite_frames = SubResource("SpriteFrames_s1bvh")
 animation = &"quieto"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46355108]
-position = Vector2(114, 173)
+position = Vector2(60, 218)
 shape = SubResource("RectangleShape2D_23idm")
 
 [node name="Movimiento" type="Node" parent="." unique_id=1251985745]
@@ -80,3 +80,6 @@ script = ExtResource("11_iegci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=2048632277]
 shape = SubResource("RectangleShape2D_uyhod")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1644495453]
+position = Vector2(52, 216)
