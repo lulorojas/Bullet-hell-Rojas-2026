@@ -69,21 +69,18 @@ script = ExtResource("1_uyhod")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=127341911]
 unique_name_in_owner = true
-position = Vector2(64.624985, 211)
 scale = Vector2(0.27583984, 0.43999994)
 sprite_frames = SubResource("SpriteFrames_s1bvh")
 animation = &"caminar"
 autoplay = "caminar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46355108]
-position = Vector2(60, 218)
 shape = SubResource("RectangleShape2D_23idm")
 
 [node name="Movimiento" type="Node" parent="." unique_id=1251985745]
 script = ExtResource("11_iegci")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1644495453]
-position = Vector2(52, 216)
 limit_left = 330
 limit_top = -485
 limit_right = 971
@@ -92,5 +89,3 @@ limit_bottom = 580
 [node name="TimerDisparo" type="Timer" parent="." unique_id=1283153051]
 wait_time = 5.0
 one_shot = true
-
-[node name="Marker2D" type="Marker2D" parent="." unique_id=170612950]

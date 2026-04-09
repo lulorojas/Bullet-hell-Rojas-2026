@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://detqac7732gio"]
+
+[ext_resource type="Texture2D" uid="uid://bkb3bcvgnxn40" path="res://Assets/TROLL/Troll_01_1_ATTACK_000.png" id="1_mdvmg"]
+[ext_resource type="Texture2D" uid="uid://cl2ak2t6igm7c" path="res://Assets/TROLL/Troll_01_1_ATTACK_009.png" id="2_xrkym"]
+[ext_resource type="Texture2D" uid="uid://bbnhtr7ukngkd" path="res://Assets/TROLL/Troll_01_1_ATTACK_008.png" id="3_w5esp"]
+[ext_resource type="Texture2D" uid="uid://cf2b7dvh1hxen" path="res://Assets/TROLL/Troll_01_1_ATTACK_005.png" id="4_at3dh"]
+[ext_resource type="Texture2D" uid="uid://dbuwij7asq47h" path="res://Assets/TROLL/Troll_01_1_ATTACK_004.png" id="5_2jl5w"]
+[ext_resource type="Texture2D" uid="uid://0onw34aa7iyv" path="res://Assets/TROLL/Troll_01_1_ATTACK_001.png" id="6_gcygt"]
+[ext_resource type="Texture2D" uid="uid://b2vjj61lf07j4" path="res://Assets/TROLL/Troll_01_1_ATTACK_007.png" id="7_fkha4"]
+[ext_resource type="Texture2D" uid="uid://cgogfib2io4hw" path="res://Assets/TROLL/Troll_01_1_ATTACK_006.png" id="8_gqcgw"]
+[ext_resource type="Texture2D" uid="uid://c4gh1pmanrs5h" path="res://Assets/TROLL/Troll_01_1_ATTACK_002.png" id="9_6fmi4"]
+[ext_resource type="Texture2D" uid="uid://ddjwka7xddtye" path="res://Assets/TROLL/Troll_01_1_ATTACK_003.png" id="10_pbnpx"]
+[ext_resource type="Texture2D" uid="uid://bxdt0l4l5l4yh" path="res://Assets/TROLL/Troll_01_1_IDLE_001.png" id="11_yy7fr"]
+[ext_resource type="Texture2D" uid="uid://cxll8vgqljvma" path="res://Assets/TROLL/Troll_01_1_IDLE_002.png" id="12_nct5o"]
+[ext_resource type="Texture2D" uid="uid://dmd3lpa648y13" path="res://Assets/TROLL/Troll_01_1_IDLE_006.png" id="13_y6os1"]
+[ext_resource type="Texture2D" uid="uid://f3oietn450b1" path="res://Assets/TROLL/Troll_01_1_IDLE_005.png" id="14_w255t"]
+[ext_resource type="Texture2D" uid="uid://cabdw65uc5l0k" path="res://Assets/TROLL/Troll_01_1_IDLE_003.png" id="15_wyc43"]
+[ext_resource type="Texture2D" uid="uid://dq25gs1s07odl" path="res://Assets/TROLL/Troll_01_1_IDLE_009.png" id="16_6wcri"]
+[ext_resource type="Texture2D" uid="uid://c4d10hpo5fmk" path="res://Assets/TROLL/Troll_01_1_IDLE_008.png" id="17_1gff6"]
+[ext_resource type="Texture2D" uid="uid://bu5hcsygl24g" path="res://Assets/TROLL/Troll_01_1_IDLE_007.png" id="18_di76g"]
+[ext_resource type="Texture2D" uid="uid://ctmoa0owvw8cw" path="res://Assets/TROLL/Troll_01_1_IDLE_004.png" id="19_kyqnf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mkjek"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mdvmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xrkym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w5esp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_at3dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2jl5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gcygt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fkha4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gqcgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6fmi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pbnpx")
+}],
+"loop": true,
+"name": &"Atacar",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_yy7fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nct5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y6os1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_w255t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wyc43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6wcri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1gff6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_di76g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kyqnf")
+}],
+"loop": true,
+"name": &"Quieto",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryyld"]
+size = Vector2(628, 764.875)
+
+[node name="Trol" type="CharacterBody2D" unique_id=916524441]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891741882]
+sprite_frames = SubResource("SpriteFrames_mkjek")
+animation = &"Atacar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1682775926]
+shape = SubResource("RectangleShape2D_ryyld")

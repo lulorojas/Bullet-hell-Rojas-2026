@@ -186,6 +186,7 @@ radius = 14.142136
 script = ExtResource("1_s71gx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1991841001]
+rotation = 3.1415927
 sprite_frames = SubResource("SpriteFrames_yiqwu")
 animation = &"Lanzar"
 autoplay = "Lanzar"

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://byf104tqwfxxq"]
+
+[ext_resource type="Texture2D" uid="uid://en20q261o8i6" path="res://Assets/Green_Slime/Jump.png" id="1_xpxse"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ujdx"]
+atlas = ExtResource("1_xpxse")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glgsx"]
+atlas = ExtResource("1_xpxse")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8kwp"]
+atlas = ExtResource("1_xpxse")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ujdx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ujdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glgsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8kwp")
+}],
+"loop": true,
+"name": &"Lanzar",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4neom"]
+radius = 22.090721
+
+[node name="Area2D" type="Area2D" unique_id=935953594]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1892768170]
+sprite_frames = SubResource("SpriteFrames_2ujdx")
+animation = &"Lanzar"
+frame_progress = 0.21246731
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=349093284]
+position = Vector2(1, 25)
+shape = SubResource("CircleShape2D_4neom")
