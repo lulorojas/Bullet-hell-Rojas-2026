@@ -10,6 +10,11 @@ func _ready():
 	mago = get_parent()
 
 func _physics_process(_delta):
+	
+	if mago.esta_muerto:
+		mago.velocity = Vector2.ZERO
+		return
+	
 	_direccion = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	if mago:
@@ -18,6 +23,10 @@ func _physics_process(_delta):
 		_gestionar_animaciones()
 
 func _gestionar_animaciones():
+	
+	if mago.esta_muerto or mago.recibiendo_danio:
+		return
+	
 	if %AnimatedSprite2D.animation == "Atacar" and %AnimatedSprite2D.is_playing():
 		return
 		
