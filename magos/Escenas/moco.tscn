@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://byf104tqwfxxq"]
 
+[ext_resource type="Script" uid="uid://clo118gwjaykd" path="res://Scripts/moco.gd" id="1_2ujdx"]
 [ext_resource type="Texture2D" uid="uid://en20q261o8i6" path="res://Assets/Green_Slime/Jump.png" id="1_xpxse"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ujdx"]
@@ -34,7 +35,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4neom"]
 radius = 22.090721
 
-[node name="Area2D" type="Area2D" unique_id=935953594]
+[node name="Moco" type="Area2D" unique_id=935953594]
+script = ExtResource("1_2ujdx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1892768170]
 sprite_frames = SubResource("SpriteFrames_2ujdx")
@@ -44,3 +46,5 @@ frame_progress = 0.21246731
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=349093284]
 position = Vector2(1, 25)
 shape = SubResource("CircleShape2D_4neom")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

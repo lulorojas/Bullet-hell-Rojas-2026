@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://t7k1iyrm1vjv" path="res://Assets/Fondos/2cec7ybp65741.jpg" id="1_k00ba"]
 [ext_resource type="PackedScene" uid="uid://b5pacamcp0ws8" path="res://Escenas/mago.tscn" id="2_k00ba"]
+[ext_resource type="PackedScene" uid="uid://detqac7732gio" path="res://Escenas/trol.tscn" id="3_f3gyp"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k00ba"]
 a = Vector2(-138, -220)
@@ -70,7 +71,7 @@ scale = Vector2(0.41669634, 0.530599)
 texture = ExtResource("1_k00ba")
 
 [node name="Mago" parent="." unique_id=1972755322 instance=ExtResource("2_k00ba")]
-position = Vector2(730, -9)
+position = Vector2(751, 463)
 scale = Vector2(0.41669634, 0.530599)
 
 [node name="Limites" type="StaticBody2D" parent="." unique_id=1463833753 groups=["obstaculos"]]
@@ -128,3 +129,18 @@ shape = SubResource("RectangleShape2D_f3gyp")
 [node name="Agua4" type="CollisionShape2D" parent="Lago" unique_id=77044569]
 position = Vector2(193, 86)
 shape = SubResource("SegmentShape2D_xre0a")
+
+[node name="Puntos" type="Node2D" parent="." unique_id=1223453811]
+
+[node name="Punto2" type="Marker2D" parent="Puntos" unique_id=1225031429]
+position = Vector2(478, -54)
+
+[node name="Punto1" type="Marker2D" parent="Puntos" unique_id=191984314]
+position = Vector2(671, -198)
+
+[node name="Punto3" type="Marker2D" parent="Puntos" unique_id=733184667]
+position = Vector2(784, -52)
+
+[node name="Trol" parent="." unique_id=916524441 node_paths=PackedStringArray("puntos") groups=["enemigos"] instance=ExtResource("3_f3gyp")]
+position = Vector2(655, -121)
+puntos = [NodePath("../Puntos/Punto1"), NodePath("../Puntos/Punto2"), NodePath("../Puntos/Punto3")]
