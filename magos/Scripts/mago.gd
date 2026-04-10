@@ -9,6 +9,7 @@ func _input(event):
 			timer_disparo.start()
 
 func _disparar():
+	$AnimatedSprite2D.play("Atacar")
 	var bola = BOLA.instantiate()
 	
 	get_parent().add_child(bola)

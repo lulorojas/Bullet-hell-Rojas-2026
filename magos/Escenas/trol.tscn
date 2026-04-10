@@ -85,7 +85,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Atacar",
-"speed": 4.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -234,9 +234,7 @@ script = ExtResource("1_xrkym")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891741882]
 scale = Vector2(0.1925, 0.20199999)
 sprite_frames = SubResource("SpriteFrames_mkjek")
-animation = &"Daño"
-frame = 5
-frame_progress = 0.20836785
+animation = &"Atacar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1682775926]
 shape = SubResource("RectangleShape2D_ryyld")
@@ -249,6 +247,10 @@ shape = SubResource("CircleShape2D_w5esp")
 [node name="TimerAtaque" type="Timer" parent="." unique_id=1916601720]
 wait_time = 1.46
 
+[node name="TimerPuntos" type="Timer" parent="." unique_id=1631811363]
+wait_time = 4.252000000000001
+
 [connection signal="body_entered" from="Rango" to="." method="_on_rango_body_entered"]
 [connection signal="body_exited" from="Rango" to="." method="_on_rango_body_exited"]
 [connection signal="timeout" from="TimerAtaque" to="." method="_on_timer_ataque_timeout"]
+[connection signal="timeout" from="TimerPuntos" to="." method="_on_timer_puntos_timeout"]

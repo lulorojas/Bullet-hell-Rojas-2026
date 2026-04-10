@@ -6,12 +6,21 @@ const MOCO = preload("res://Escenas/moco.tscn")
 var indice = 0
 var aceleracion = 120
 var mago = null
+var esperando=false
 
 func _physics_process(_delta):
+	
+	
 	if mago != null:
 		velocity = Vector2.ZERO
 		if $AnimatedSprite2D.animation != "Atacar":
 			$AnimatedSprite2D.play("Quieto")
+			
+	if esperando:
+		velocity = Vector2.ZERO
+		$AnimatedSprite2D.play("Quieto")
+		
+		
 	else:
 		if puntos.size() > 0:
 			var punto_objetivo = puntos[indice].global_position
@@ -26,10 +35,18 @@ func _physics_process(_delta):
 			
 			if distancia < 5.0:
 				indice += 1
+				velocity = Vector2.ZERO
+				$TimerPuntos.start()
+				esperando=true	
 				if indice >= puntos.size():
 					indice = 0
 	
 	move_and_slide()
+	
+
+func _on_timer_puntos_timeout():
+	esperando=false
+	
 
 func atacar():
 	$AnimatedSprite2D.play("Atacar")
@@ -52,3 +69,7 @@ func _on_rango_body_exited(body):
 func _on_timer_ataque_timeout():
 	if mago != null:
 		atacar()
+		
+
+
+	
