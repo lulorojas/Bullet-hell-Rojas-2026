@@ -152,7 +152,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Daño",
-"speed": 7.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -234,7 +234,9 @@ script = ExtResource("1_xrkym")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891741882]
 scale = Vector2(0.1925, 0.20199999)
 sprite_frames = SubResource("SpriteFrames_mkjek")
-animation = &"Atacar"
+animation = &"Daño"
+frame = 8
+frame_progress = 0.58910984
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1682775926]
 shape = SubResource("RectangleShape2D_ryyld")
