@@ -229,6 +229,7 @@ size = Vector2(86, 133.4375)
 radius = 271.0074
 
 [node name="Trol" type="CharacterBody2D" unique_id=916524441]
+platform_floor_layers = 4294967294
 script = ExtResource("1_xrkym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891741882]
