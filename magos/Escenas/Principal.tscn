@@ -64,6 +64,12 @@ size = Vector2(101, 43)
 a = Vector2(412, 242)
 b = Vector2(503, 211)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87gwq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s4wg"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="Principal" type="Node2D" unique_id=1872637834]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1422567735]
@@ -160,32 +166,44 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="GameOver/GameOverMenu" unique_id=2035439694]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 0, 0, 0.7921569)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="GameOver/GameOverMenu" unique_id=215499084]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="TextureRect" type="TextureRect" parent="GameOver/GameOverMenu/VBoxContainer" unique_id=74238330]
-layout_mode = 2
+[node name="TextureRect" type="TextureRect" parent="GameOver/GameOverMenu" unique_id=74238330]
+layout_mode = 0
+offset_left = -49.5
+offset_top = 64.0
+offset_right = 649.5
+offset_bottom = 514.0
 texture = ExtResource("5_1s4wg")
 stretch_mode = 5
 
-[node name="Reiniciar" type="Button" parent="GameOver/GameOverMenu/VBoxContainer" unique_id=1752053413]
-layout_mode = 2
+[node name="Reiniciar" type="Button" parent="GameOver/GameOverMenu" unique_id=1752053413]
+layout_mode = 0
+offset_left = -49.0
+offset_top = 339.0
+offset_right = 644.0
+offset_bottom = 373.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_87gwq")
+text = "REINICIAR"
 
-[node name="Menu" type="Button" parent="GameOver/GameOverMenu/VBoxContainer" unique_id=1011693957]
-layout_mode = 2
+[node name="Menu" type="Button" parent="GameOver/GameOverMenu" unique_id=1011693957]
+layout_mode = 0
+offset_left = -58.0
+offset_top = 387.0
+offset_right = 638.0
+offset_bottom = 421.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_1s4wg")
+text = "MENU"
+
+[connection signal="pressed" from="GameOver/GameOverMenu/Reiniciar" to="GameOver" method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="GameOver/GameOverMenu/Menu" to="GameOver" method="_on_menu_pressed"]
