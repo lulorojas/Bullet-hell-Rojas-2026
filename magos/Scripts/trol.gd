@@ -13,6 +13,8 @@ var vida_max = 7
 var esta_muerto = false
 var recibiendo_danio = false
 
+var ataques_realizados = 0
+
 func _ready():
 	vida = 7
 	vida_max = 7 
@@ -58,12 +60,45 @@ func _on_timer_puntos_timeout():
 	esperando = false
 
 func atacar():
+	
+	if mago == null or esta_muerto:
+		return
+	
 	$AnimatedSprite2D.play("Atacar")
-	var moco = MOCO.instantiate()
-	moco.global_position = global_position 
-	moco.dir = global_position.direction_to(mago.global_position)
-	moco.rotation = moco.dir.angle()
-	get_parent().add_child(moco)
+	
+	if vida <= 4:
+		patron_abanico(8, 150)
+	else:
+		if ataques_realizados < 2:
+			patron_abanico(3, 40)
+		else:
+			patron_abanico(8, 100)
+		
+		ataques_realizados += 1
+		if ataques_realizados >= 4:
+			ataques_realizados = 0
+
+func patron_abanico(cantidad, apertura):
+	var direccion_base = global_position.direction_to(mago.global_position).angle()
+	var angulo_inicial 	= direccion_base - deg_to_rad(apertura / 2.0)
+	var paso_angular = deg_to_rad(apertura) / (cantidad - 1)
+	
+	for i in range(cantidad):
+		var moco = MOCO.instantiate()
+		var angulo_actual = angulo_inicial + (paso_angular * i)
+		
+		moco.global_position = global_position
+		moco.dir = Vector2.from_angle(angulo_actual)
+		moco.rotation = angulo_actual
+		
+		get_parent().add_child(moco)
+
+func ataque_dificil():
+	
+	patron_abanico(15, 360)
+	patron_abanico(5, 40) 
+	patron_abanico(8, 120)
+
 
 func _on_rango_body_entered(body):
 	if body.name == "Mago":
@@ -90,14 +125,17 @@ func recibir_danio(cantidad):
 	vida -= cantidad
 	actualizar_barra_vida()
 	
+	if vida == 4: 
+		ataque_dificil()
+		
+	if vida == 2: 
+		ataque_dificil()
+	
 	if vida <= 1:
 		morir()
 	else:
 		recibiendo_danio = true
 		$AnimatedSprite2D.play("Dano")
-		
-		await get_tree().create_timer(1.0).timeout
-		
 		if not esta_muerto:
 			recibiendo_danio = false
 
@@ -105,6 +143,7 @@ func morir():
 	esta_muerto = true
 	$AnimatedSprite2D.play("Morir")
 	$CanvasLayer.visible = false 
+	await get_tree().create_timer(2.0).timeout
 	
-	await get_tree().create_timer(2.0).timeout 
+	
 	queue_free()

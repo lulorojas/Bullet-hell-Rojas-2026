@@ -133,7 +133,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23idm"]
-size = Vector2(83, 128)
+size = Vector2(34.625, 66.75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fo1tc"]
 atlas = ExtResource("28_0o77d")
@@ -154,6 +154,7 @@ animation = &"Dano"
 autoplay = "caminar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46355108]
+position = Vector2(-5, 14)
 shape = SubResource("RectangleShape2D_23idm")
 
 [node name="Movimiento" type="Node" parent="." unique_id=1251985745]
@@ -166,6 +167,7 @@ limit_right = 971
 limit_bottom = 580
 
 [node name="TimerDisparo" type="Timer" parent="." unique_id=1283153051]
+wait_time = 3.0
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=504149871]
