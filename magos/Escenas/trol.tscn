@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://doxcm3x7xaaxc" path="res://Assets/TROLL/Troll_01_1_DIE_003.png" id="38_ft86i"]
 [ext_resource type="Texture2D" uid="uid://c4vnin2b3k7d0" path="res://Assets/TROLL/Troll_01_1_DIE_005.png" id="39_fdd4j"]
 [ext_resource type="Texture2D" uid="uid://bxbvg574qxq18" path="res://Assets/TROLL/Troll_01_1_DIE_004.png" id="40_cod03"]
+[ext_resource type="Texture2D" uid="uid://bcs17g618pvtb" path="res://Assets/Barra de vida/Game-UI-Health-Bar-Transparent.png" id="50_evbvc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mkjek"]
 animations = [{
@@ -151,7 +152,7 @@ animations = [{
 "texture": ExtResource("30_h482e")
 }],
 "loop": true,
-"name": &"Daño",
+"name": &"Dano",
 "speed": 4.0
 }, {
 "frames": [{
@@ -226,7 +227,7 @@ animations = [{
 size = Vector2(86, 133.4375)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5esp"]
-radius = 271.0074
+radius = 360.05
 
 [node name="Trol" type="CharacterBody2D" unique_id=916524441]
 platform_floor_layers = 4294967294
@@ -235,9 +236,7 @@ script = ExtResource("1_xrkym")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891741882]
 scale = Vector2(0.1925, 0.20199999)
 sprite_frames = SubResource("SpriteFrames_mkjek")
-animation = &"Daño"
-frame = 8
-frame_progress = 0.58910984
+animation = &"Dano"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1682775926]
 shape = SubResource("RectangleShape2D_ryyld")
@@ -252,6 +251,29 @@ wait_time = 1.46
 
 [node name="TimerPuntos" type="Timer" parent="." unique_id=1631811363]
 wait_time = 4.252000000000001
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1100066617]
+layer = 10
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=2092523688]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="BarraVidaTrol" type="Sprite2D" parent="CanvasLayer" unique_id=1456631976]
+unique_name_in_owner = true
+position = Vector2(298.00003, 31.849052)
+scale = Vector2(0.33583334, 0.27188152)
+texture = ExtResource("50_evbvc")
+vframes = 9
+frame = 7
+region_rect = Rect2(1255.1465, 548.05475, 23.836426, 941.5368)
 
 [connection signal="body_entered" from="Rango" to="." method="_on_rango_body_entered"]
 [connection signal="body_exited" from="Rango" to="." method="_on_rango_body_exited"]
