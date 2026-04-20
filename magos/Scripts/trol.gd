@@ -67,18 +67,18 @@ func atacar():
 	$AnimatedSprite2D.play("Atacar")
 	
 	if vida <= 4:
-		patron_abanico(8, 150)
+		patron_disparo(8, 150)
 	else:
 		if ataques_realizados < 2:
-			patron_abanico(3, 40)
+			patron_disparo(3, 40)
 		else:
-			patron_abanico(8, 100)
+			patron_disparo(8, 100)
 		
 		ataques_realizados += 1
 		if ataques_realizados >= 4:
 			ataques_realizados = 0
 
-func patron_abanico(cantidad, apertura):
+func patron_disparo(cantidad, apertura):
 	var direccion_base = global_position.direction_to(mago.global_position).angle()
 	var angulo_inicial 	= direccion_base - deg_to_rad(apertura / 2.0)
 	var paso_angular = deg_to_rad(apertura) / (cantidad - 1)
@@ -95,9 +95,9 @@ func patron_abanico(cantidad, apertura):
 
 func ataque_dificil():
 	
-	patron_abanico(15, 360)
-	patron_abanico(5, 40) 
-	patron_abanico(8, 120)
+	patron_disparo(15, 360)
+	patron_disparo(5, 40) 
+	patron_disparo(8, 120)
 
 
 func _on_rango_body_entered(body):
