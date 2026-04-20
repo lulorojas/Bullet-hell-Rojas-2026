@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://1xuyivsvgdfv"]
+
+[ext_resource type="Script" uid="uid://ko06xecsbbqx" path="res://menu_principal.gd" id="1_ft1ng"]
+[ext_resource type="Texture2D" uid="uid://cpirsdd4darsx" path="res://Assets/Fondos/il_340x270.5021762033_slp7.png" id="2_qncgo"]
+
+[node name="MenuPrincipal" type="Control" unique_id=1443819353]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -262.0
+offset_bottom = -255.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ft1ng")
+
+[node name="FondoMenuPrincipal" type="TextureRect" parent="." unique_id=1510794686]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -20.0
+offset_right = 629.0
+offset_bottom = 675.0
+texture = ExtResource("2_qncgo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BotonesContenedor" type="VBoxContainer" parent="." unique_id=46971935]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 122.0
+offset_top = 97.5
+offset_right = 173.0
+offset_bottom = 137.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="JUGAR" type="Button" parent="BotonesContenedor" unique_id=1653605405]
+layout_mode = 2
+text = "JUGAR"
+
+[node name="SALIR" type="Button" parent="BotonesContenedor" unique_id=1536540140]
+layout_mode = 2
+text = "SALIR"
+
+[connection signal="pressed" from="BotonesContenedor/JUGAR" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="BotonesContenedor/SALIR" to="." method="_on_salir_pressed"]
