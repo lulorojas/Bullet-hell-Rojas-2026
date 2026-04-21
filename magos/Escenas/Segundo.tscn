@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bmvkt6a2vpbb8"]
+
+[ext_resource type="Texture2D" uid="uid://cer18esj6alaj" path="res://Assets/Fondos/jotyu37evg881.jpg" id="1_s1m5u"]
+[ext_resource type="PackedScene" uid="uid://b5pacamcp0ws8" path="res://Escenas/mago.tscn" id="2_ggslm"]
+
+[node name="Node2D" type="Node2D" unique_id=803475153]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=520346860]
+position = Vector2(846, 416)
+scale = Vector2(1.3447266, 1.3471926)
+texture = ExtResource("1_s1m5u")
+
+[node name="Mago" parent="." unique_id=1972755322 instance=ExtResource("2_ggslm")]
+position = Vector2(92, 142)

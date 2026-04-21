@@ -33,11 +33,11 @@ b = Vector2(303, -314)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_o44fx"]
 a = Vector2(768, 495)
-b = Vector2(587, 77)
+b = Vector2(590, 75)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_4w22c"]
 a = Vector2(638, -53)
-b = Vector2(589, 74)
+b = Vector2(590, 75)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0nhm1"]
 a = Vector2(730, -78)
