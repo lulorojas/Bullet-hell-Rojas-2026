@@ -224,7 +224,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ryyld"]
-size = Vector2(86, 133.4375)
+size = Vector2(45, 81.71875)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5esp"]
 radius = 360.05
@@ -239,6 +239,7 @@ sprite_frames = SubResource("SpriteFrames_mkjek")
 animation = &"Dano"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1682775926]
+position = Vector2(2.5, 25.859375)
 shape = SubResource("RectangleShape2D_ryyld")
 
 [node name="Rango" type="Area2D" parent="." unique_id=389934669]

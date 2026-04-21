@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://detqac7732gio" path="res://Escenas/trol.tscn" id="3_f3gyp"]
 [ext_resource type="Script" uid="uid://dv2ty3mdppx5q" path="res://Scripts/game_over.gd" id="4_87gwq"]
 [ext_resource type="Texture2D" uid="uid://dreb6xja54n61" path="res://Assets/Fondos/GameoverSMB.png" id="5_1s4wg"]
+[ext_resource type="Script" uid="uid://bnv03vb5wnyme" path="res://Scripts/menu_pausa.gd" id="6_1s4wg"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k00ba"]
 a = Vector2(-138, -220)
@@ -69,6 +70,42 @@ bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s4wg"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o44fx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4w22c"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03jm0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="Principal" type="Node2D" unique_id=1872637834]
 
@@ -205,5 +242,49 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_1s4wg")
 text = "MENU"
 
+[node name="MenuPausa" type="CanvasLayer" parent="." unique_id=1499457262]
+process_mode = 3
+script = ExtResource("6_1s4wg")
+
+[node name="ColorRect" type="ColorRect" parent="MenuPausa" unique_id=658182525]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 635.0
+offset_bottom = 701.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.74509805)
+
+[node name="Continuar" type="Button" parent="MenuPausa" unique_id=820086701]
+offset_left = 226.0
+offset_top = 287.0
+offset_right = 376.0
+offset_bottom = 329.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_o44fx")
+text = "CONTINUAR"
+
+[node name="Reiniciar" type="Button" parent="MenuPausa" unique_id=2058686430]
+offset_left = 245.0
+offset_top = 380.0
+offset_right = 369.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_4w22c")
+text = "REINICIAR"
+
+[node name="Volver" type="Button" parent="MenuPausa" unique_id=206874796]
+offset_left = 199.0
+offset_top = 335.0
+offset_right = 411.0
+offset_bottom = 377.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_03jm0")
+text = "VOLVER AL MENU"
+
 [connection signal="pressed" from="GameOver/GameOverMenu/Reiniciar" to="GameOver" method="_on_reiniciar_pressed"]
 [connection signal="pressed" from="GameOver/GameOverMenu/Menu" to="GameOver" method="_on_menu_pressed"]
+[connection signal="pressed" from="MenuPausa/Continuar" to="MenuPausa" method="_on_continuar_pressed"]
+[connection signal="pressed" from="MenuPausa/Reiniciar" to="MenuPausa" method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="MenuPausa/Volver" to="MenuPausa" method="_on_volver_pressed"]
