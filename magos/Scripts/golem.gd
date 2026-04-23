@@ -112,3 +112,7 @@ func morir():
 	$CanvasLayer.visible = false
 	await get_tree().create_timer(2.0).timeout
 	queue_free()
+
+
+func _on_timer_secuaces_timeout() -> void:
+	pass # Replace with function body.
