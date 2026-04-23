@@ -161,10 +161,6 @@ shape = SubResource("RectangleShape2D_23idm")
 script = ExtResource("11_iegci")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1644495453]
-limit_left = 330
-limit_top = -485
-limit_right = 971
-limit_bottom = 580
 
 [node name="TimerDisparo" type="Timer" parent="." unique_id=1283153051]
 wait_time = 3.0

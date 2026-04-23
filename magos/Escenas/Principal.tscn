@@ -118,6 +118,10 @@ texture = ExtResource("1_k00ba")
 [node name="Mago" parent="." unique_id=1972755322 instance=ExtResource("2_k00ba")]
 position = Vector2(751, 463)
 scale = Vector2(0.41669634, 0.530599)
+limite_izquierda = 330
+limite_derecha = 971
+limite_arriba = -485
+limite_abajo = 590
 
 [node name="Limites" type="StaticBody2D" parent="." unique_id=1463833753 groups=["obstaculos"]]
 position = Vector2(195, 84)

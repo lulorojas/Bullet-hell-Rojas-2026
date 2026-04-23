@@ -9,10 +9,24 @@ var vida_actual = 100
 var esta_muerto = false
 var recibiendo_danio = false
 
+@export var limite_izquierda: int = 0
+@export var limite_derecha: int = 600
+@export var limite_arriba: int = 0
+@export var limite_abajo: int = 648
+
+@export var zoom_camara: Vector2 = Vector2(1, 1)
+
 func _ready():
+	
 	%BarraVida.max_value = vida_max
 	%BarraVida.value = vida_actual
-
+	
+	$Camera2D.limit_left = limite_izquierda
+	$Camera2D.limit_right = limite_derecha
+	$Camera2D.limit_top = limite_arriba
+	$Camera2D.limit_bottom = limite_abajo
+	
+	$Camera2D.zoom = zoom_camara
 
 func _input(event):
 	if event.is_action_pressed("click_derecho") and timer_disparo.is_stopped():
