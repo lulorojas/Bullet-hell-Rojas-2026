@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d1i0vu0vadxda"]
+
+[ext_resource type="Script" uid="uid://ps7jyymish7x" path="res://Scripts/roca.gd" id="1_rxoqk"]
+[ext_resource type="Texture2D" uid="uid://88egk1ob1ru1" path="res://Assets/bala_golem/Icon31_21.png" id="1_t6xox"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rxoqk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t6xox")
+}],
+"loop": true,
+"name": &"Lanzar",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1ty8"]
+
+[node name="roca" type="Area2D" unique_id=941660501]
+script = ExtResource("1_rxoqk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1236324497]
+scale = Vector2(1.375, 1.2500001)
+sprite_frames = SubResource("SpriteFrames_rxoqk")
+animation = &"Lanzar"
+frame_progress = 0.37155515
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1564035678]
+position = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_g1ty8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -3,6 +3,51 @@
 [ext_resource type="Texture2D" uid="uid://cer18esj6alaj" path="res://Assets/Fondos/jotyu37evg881.jpg" id="1_s1m5u"]
 [ext_resource type="PackedScene" uid="uid://b5pacamcp0ws8" path="res://Escenas/mago.tscn" id="2_ggslm"]
 [ext_resource type="PackedScene" uid="uid://dco5084co4tqx" path="res://Escenas/golem.tscn" id="3_ggslm"]
+[ext_resource type="Script" uid="uid://dv2ty3mdppx5q" path="res://Scripts/game_over.gd" id="4_m7etn"]
+[ext_resource type="Texture2D" uid="uid://dreb6xja54n61" path="res://Assets/Fondos/GameoverSMB.png" id="5_631xt"]
+[ext_resource type="Script" uid="uid://bnv03vb5wnyme" path="res://Scripts/menu_pausa.gd" id="6_q2udn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ttgdi"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ta8dy"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qlmi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bes60"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwgqy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="Node2D" type="Node2D" unique_id=803475153]
 
@@ -17,5 +62,104 @@ limite_arriba = -680
 limite_abajo = 700
 zoom_camara = Vector2(0.5, 0.5)
 
-[node name="golem" parent="." unique_id=607830102 instance=ExtResource("3_ggslm")]
+[node name="golem" parent="." unique_id=607830102 groups=["enemigos2"] instance=ExtResource("3_ggslm")]
 position = Vector2(1203, -32)
+
+[node name="GameOver" type="CanvasLayer" parent="." unique_id=557715975]
+script = ExtResource("4_m7etn")
+
+[node name="GameOverMenu" type="Control" parent="GameOver" unique_id=981727108]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOver/GameOverMenu" unique_id=543675228]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="GameOver/GameOverMenu" unique_id=1360101856]
+layout_mode = 0
+offset_left = -49.5
+offset_top = 64.0
+offset_right = 649.5
+offset_bottom = 514.0
+texture = ExtResource("5_631xt")
+stretch_mode = 5
+
+[node name="Reiniciar" type="Button" parent="GameOver/GameOverMenu" unique_id=1107957041]
+layout_mode = 0
+offset_left = -49.0
+offset_top = 339.0
+offset_right = 644.0
+offset_bottom = 373.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ttgdi")
+text = "REINICIAR"
+
+[node name="Menu" type="Button" parent="GameOver/GameOverMenu" unique_id=1190059362]
+layout_mode = 0
+offset_left = -58.0
+offset_top = 387.0
+offset_right = 638.0
+offset_bottom = 421.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_ta8dy")
+text = "MENU"
+
+[node name="MenuPausa" type="CanvasLayer" parent="." unique_id=497521999]
+process_mode = 3
+script = ExtResource("6_q2udn")
+
+[node name="ColorRect" type="ColorRect" parent="MenuPausa" unique_id=1377502918]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 635.0
+offset_bottom = 701.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.74509805)
+
+[node name="Continuar" type="Button" parent="MenuPausa" unique_id=929448517]
+offset_left = 226.0
+offset_top = 287.0
+offset_right = 376.0
+offset_bottom = 329.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_8qlmi")
+text = "CONTINUAR"
+
+[node name="Reiniciar" type="Button" parent="MenuPausa" unique_id=1419942999]
+offset_left = 245.0
+offset_top = 380.0
+offset_right = 369.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_bes60")
+text = "REINICIAR"
+
+[node name="Volver" type="Button" parent="MenuPausa" unique_id=600839426]
+offset_left = 199.0
+offset_top = 335.0
+offset_right = 411.0
+offset_bottom = 377.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_wwgqy")
+text = "VOLVER AL MENU"
+
+[connection signal="pressed" from="GameOver/GameOverMenu/Reiniciar" to="GameOver" method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="GameOver/GameOverMenu/Menu" to="GameOver" method="_on_menu_pressed"]
+[connection signal="pressed" from="MenuPausa/Continuar" to="MenuPausa" method="_on_continuar_pressed"]
+[connection signal="pressed" from="MenuPausa/Reiniciar" to="MenuPausa" method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="MenuPausa/Volver" to="MenuPausa" method="_on_volver_pressed"]

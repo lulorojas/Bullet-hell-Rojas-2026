@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dco5084co4tqx"]
 
 [ext_resource type="Texture2D" uid="uid://8ok3yfad0a5b" path="res://Assets/Golem/Golem_1_attack.png" id="1_0wp57"]
+[ext_resource type="Script" uid="uid://c1durc0cbuvo6" path="res://Scripts/golem.gd" id="1_82tvl"]
 [ext_resource type="Texture2D" uid="uid://bcs17g618pvtb" path="res://Assets/Barra de vida/Game-UI-Health-Bar-Transparent.png" id="1_e2qn2"]
 [ext_resource type="Texture2D" uid="uid://ck571gidooexl" path="res://Assets/Golem/Golem_1_walk.png" id="2_82tvl"]
 [ext_resource type="Texture2D" uid="uid://ct2gojkgyq87i" path="res://Assets/Golem/Golem_1_hurt.png" id="3_gf0qw"]
@@ -353,7 +354,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8i25"]
 size = Vector2(110, 133)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_82tvl"]
+radius = 757.0707
+
 [node name="golem" type="CharacterBody2D" unique_id=607830102]
+script = ExtResource("1_82tvl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=394307003]
 scale = Vector2(5.5, 5.5)
@@ -367,8 +372,9 @@ shape = SubResource("RectangleShape2D_n8i25")
 [node name="Rango" type="Area2D" parent="." unique_id=700616566]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rango" unique_id=710143010]
+shape = SubResource("CircleShape2D_82tvl")
 
-[node name="Timer" type="Timer" parent="." unique_id=1824003220]
+[node name="TimerAtaque" type="Timer" parent="." unique_id=1824003220]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=799347116]
 layer = 10
@@ -392,3 +398,7 @@ texture = ExtResource("1_e2qn2")
 vframes = 9
 frame = 7
 region_rect = Rect2(1255.1465, 548.05475, 23.836426, 941.5368)
+
+[connection signal="body_entered" from="Rango" to="." method="_on_rango_body_entered"]
+[connection signal="body_exited" from="Rango" to="." method="_on_rango_body_exited"]
+[connection signal="timeout" from="TimerAtaque" to="." method="_on_timer_ataque_timeout"]

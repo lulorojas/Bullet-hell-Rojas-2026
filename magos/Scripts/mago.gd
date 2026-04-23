@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 const BOLA = preload("res://Escenas/bola_de_fuego.tscn")
 @onready var timer_disparo = $TimerDisparo
-@onready var game_over: CanvasLayer = get_node("/root/Principal/GameOver")
 
 var vida_max = 100
 var vida_actual = 100
@@ -65,7 +64,9 @@ func morir():
 	esta_muerto = true
 	$AnimatedSprite2D.play("Morir")
 	
-	game_over.mostrar()
+	var game_over = get_tree().get_root().find_child("GameOver", true, false)
+	if game_over:
+		game_over.mostrar()
 	await get_tree().create_timer(5.0).timeout
 	queue_free()
 
