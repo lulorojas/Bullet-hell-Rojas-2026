@@ -400,7 +400,8 @@ frame = 7
 region_rect = Rect2(1255.1465, 548.05475, 23.836426, 941.5368)
 
 [node name="TimerSecuaces" type="Timer" parent="." unique_id=170139925]
-wait_time = 20.0
+wait_time = 15.0
+autostart = true
 
 [connection signal="body_entered" from="Rango" to="." method="_on_rango_body_entered"]
 [connection signal="body_exited" from="Rango" to="." method="_on_rango_body_exited"]

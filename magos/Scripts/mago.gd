@@ -55,7 +55,7 @@ func recibir_danio(cantidad):
 		recibiendo_danio = true
 		$AnimatedSprite2D.play("Dano")
 		
-		await get_tree().create_timer(3.0).timeout
+		
 		
 		if not esta_muerto:
 			recibiendo_danio = false

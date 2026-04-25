@@ -127,16 +127,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_k6tt6"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcin"]
+size = Vector2(60, 48)
 
-[node name="secuaz" type="Area2D" unique_id=1818095322]
+[node name="secuaz" type="Area2D" unique_id=1818095322 groups=["secuaces"]]
 script = ExtResource("1_ugcin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1838574679]
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_dn2qh")
 animation = &"danio"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1904559279]
-shape = SubResource("CircleShape2D_k6tt6")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1904559279 groups=["secuaces"]]
+position = Vector2(5, 6)
+shape = SubResource("RectangleShape2D_ugcin")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,7 +1,7 @@
 extends Area2D
 
-var danio = 1
-var velocidad = 80
+
+var velocidad = 200
 var mago = null
 var esta_muerto = false
 
@@ -22,6 +22,10 @@ func _on_body_entered(body):
 	if body.name == "Mago" and not esta_muerto:
 		esta_muerto = true
 		$AnimatedSprite2D.play("atacar")
-		body.recibir_danio(danio)
+		body.recibir_danio(25)
 		await get_tree().create_timer(0.5).timeout
 		queue_free()
+
+func morir():
+	$AnimatedSprite2D.play("morir")
+	queue_free()
