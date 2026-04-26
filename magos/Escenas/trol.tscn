@@ -227,7 +227,7 @@ animations = [{
 size = Vector2(45, 81.71875)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5esp"]
-radius = 360.05
+radius = 595.0412
 
 [node name="Trol" type="CharacterBody2D" unique_id=916524441]
 platform_floor_layers = 4294967294
@@ -257,26 +257,42 @@ wait_time = 4.252000000000001
 layer = 10
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=2092523688]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(200, 90)
 layout_mode = 3
-anchors_preset = 5
 anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
+anchor_top = 0.051000003
+anchor_right = 0.551
+anchor_bottom = 0.125
+offset_left = -100.0
+offset_top = -46.048
+offset_right = 269.4
+offset_bottom = 106.0
 grow_horizontal = 2
 
-[node name="BarraVidaTrol" type="Sprite2D" parent="CanvasLayer" unique_id=1456631976]
+[node name="BarraVidaTrol2" type="Sprite2D" parent="CanvasLayer" unique_id=784745911]
 unique_name_in_owner = true
-position = Vector2(298.00003, 31.849052)
-scale = Vector2(0.33583334, 0.27188152)
+position = Vector2(300.49994, 36.999996)
+scale = Vector2(0.4045833, 0.195)
 texture = ExtResource("50_evbvc")
 vframes = 9
 frame = 7
 region_rect = Rect2(1255.1465, 548.05475, 23.836426, 941.5368)
 
+[node name="BarraVidaTrol" type="Sprite2D" parent="CanvasLayer" unique_id=1456631976]
+unique_name_in_owner = true
+position = Vector2(300, 83)
+scale = Vector2(0.37083334, 0.181)
+texture = ExtResource("50_evbvc")
+vframes = 9
+frame = 7
+region_rect = Rect2(1255.1465, 548.05475, 23.836426, 941.5368)
+
+[node name="TimerSecuaces" type="Timer" parent="." unique_id=759118216]
+wait_time = 5.0
+autostart = true
+
 [connection signal="body_entered" from="Rango" to="." method="_on_rango_body_entered"]
 [connection signal="body_exited" from="Rango" to="." method="_on_rango_body_exited"]
 [connection signal="timeout" from="TimerAtaque" to="." method="_on_timer_ataque_timeout"]
 [connection signal="timeout" from="TimerPuntos" to="." method="_on_timer_puntos_timeout"]
+[connection signal="timeout" from="TimerSecuaces" to="." method="_on_timer_secuaces_timeout"]

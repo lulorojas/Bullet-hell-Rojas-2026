@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 var velocidad = 200
 var mago = null
 var esta_muerto = false
@@ -37,10 +38,12 @@ func _on_area_2d_body_entered(body):
 	if esta_muerto or atacando: return
 	if body.is_in_group("enemigos") or body.is_in_group("enemigos2"): return
 	
-	if body.name == "Mago":
+	if body.is_in_group("jugador") or body.name == "Mago":
 		atacando = true
 		velocity = Vector2.ZERO
-		body.recibir_danio(12.5)
+		
+		if body.has_method("recibir_danio"):
+			body.recibir_danio(25)
 		
 		$AnimatedSprite2D.play("atacar")
 		await get_tree().create_timer(1.0).timeout

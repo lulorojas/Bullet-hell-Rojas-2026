@@ -392,8 +392,8 @@ grow_horizontal = 2
 
 [node name="BarraVidaGolem" type="Sprite2D" parent="CanvasLayer" unique_id=1857891354]
 unique_name_in_owner = true
-position = Vector2(353, 27)
-scale = Vector2(0.2625, 0.14236107)
+position = Vector2(299.5, 27)
+scale = Vector2(0.39208332, 0.14236107)
 texture = ExtResource("1_e2qn2")
 vframes = 9
 frame = 7

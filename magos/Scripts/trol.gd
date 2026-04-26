@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 const MOCO = preload("res://Escenas/moco.tscn")
+const SECUAZ = preload("res://Escenas/secuaz_troll.tscn")
+
 
 @export var puntos: Array[Marker2D]
 var indice = 0
@@ -8,16 +10,16 @@ var aceleracion = 120
 var mago = null
 var esperando = false
 
-var vida = 7
-var vida_max = 7
+var vida = 14
+var vida_max = 14
 var esta_muerto = false
 var recibiendo_danio = false
 
 var ataques_realizados = 0
 
 func _ready():
-	vida = 7
-	vida_max = 7 
+	vida = 14
+	vida_max = 14 
 	actualizar_barra_vida()
 
 func _physics_process(_delta):
@@ -50,7 +52,7 @@ func _physics_process(_delta):
 				indice += 1
 				velocity = Vector2.ZERO
 				$TimerPuntos.start()
-				esperando = true	
+				esperando = true
 				if indice >= puntos.size():
 					indice = 0
 	
@@ -116,7 +118,8 @@ func _on_timer_ataque_timeout():
 
 func actualizar_barra_vida():
 	
-	%BarraVidaTrol.frame = clamp(vida, 0, 7)
+	%BarraVidaTrol.frame = clamp(vida - 7, 0, 7)  
+	%BarraVidaTrol2.frame = clamp(vida, 0, 7) 
 
 func recibir_danio(cantidad):
 	if esta_muerto or recibiendo_danio:
@@ -124,6 +127,12 @@ func recibir_danio(cantidad):
 	
 	vida -= cantidad
 	actualizar_barra_vida()
+	
+	if vida == 7: 
+		ataque_dificil()
+		
+	if vida == 9: 
+		ataque_dificil()
 	
 	if vida == 4: 
 		ataque_dificil()
@@ -147,3 +156,13 @@ func morir():
 	
 	
 	queue_free()
+
+
+func _on_timer_secuaces_timeout():
+	if esta_muerto or mago == null:
+		return
+	for i in 2:
+		var secuaz = SECUAZ.instantiate()
+		get_parent().add_child(secuaz) 
+		secuaz.global_position = global_position + Vector2(randf_range(-20, 20), randf_range(-20, 20))
+		secuaz.inicializar(mago)

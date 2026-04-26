@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://dv2ty3mdppx5q" path="res://Scripts/game_over.gd" id="4_87gwq"]
 [ext_resource type="Texture2D" uid="uid://dreb6xja54n61" path="res://Assets/Fondos/GameoverSMB.png" id="5_1s4wg"]
 [ext_resource type="Script" uid="uid://bnv03vb5wnyme" path="res://Scripts/menu_pausa.gd" id="6_1s4wg"]
+[ext_resource type="Script" uid="uid://ls7fhi24q2dd" path="res://Scripts/victoria.gd" id="7_03jm0"]
+[ext_resource type="Script" uid="uid://dmofsaht2xmif" path="res://Scripts/mostrar_victoria.gd" id="8_o44fx"]
+[ext_resource type="Texture2D" uid="uid://ql8boj2b0cm5" path="res://Assets/Fondos/istockphoto-1434200195-170667a.png" id="9_4w22c"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k00ba"]
 a = Vector2(-138, -220)
@@ -50,6 +53,10 @@ b = Vector2(735, -85)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_u6nrg"]
 a = Vector2(660, -349)
 b = Vector2(540, -417)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5ovst"]
+a = Vector2(542, -423)
+b = Vector2(434, -422)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2uodn"]
 a = Vector2(520, 63)
@@ -107,6 +114,10 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4pbm3"]
+a = Vector2(761, -341)
+b = Vector2(657, -341)
+
 [node name="Principal" type="Node2D" unique_id=1872637834]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1422567735]
@@ -115,13 +126,13 @@ position = Vector2(651, 72)
 scale = Vector2(0.41669634, 0.530599)
 texture = ExtResource("1_k00ba")
 
-[node name="Mago" parent="." unique_id=1972755322 instance=ExtResource("2_k00ba")]
+[node name="Mago" parent="." unique_id=1972755322 groups=["jugador"] instance=ExtResource("2_k00ba")]
 position = Vector2(751, 463)
 scale = Vector2(0.41669634, 0.530599)
 limite_izquierda = 330
 limite_derecha = 971
 limite_arriba = -485
-limite_abajo = 590
+limite_abajo = 575
 
 [node name="Limites" type="StaticBody2D" parent="." unique_id=1463833753 groups=["obstaculos"]]
 position = Vector2(195, 84)
@@ -160,6 +171,9 @@ shape = SubResource("SegmentShape2D_ck4vd")
 
 [node name="ParedDerecha5" type="CollisionShape2D" parent="Limites" unique_id=237361793]
 shape = SubResource("SegmentShape2D_u6nrg")
+
+[node name="Puerta" type="CollisionShape2D" parent="Limites" unique_id=944665292]
+shape = SubResource("SegmentShape2D_5ovst")
 
 [node name="Lago" type="StaticBody2D" parent="." unique_id=1210303806]
 
@@ -287,8 +301,63 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_03jm0")
 text = "VOLVER AL MENU"
 
+[node name="Victoria" type="Area2D" parent="." unique_id=625448131]
+script = ExtResource("7_03jm0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Victoria" unique_id=1473479924]
+position = Vector2(-28, 7)
+shape = SubResource("SegmentShape2D_4pbm3")
+
+[node name="MostrarVictoria" type="CanvasLayer" parent="." unique_id=1006366800]
+script = ExtResource("8_o44fx")
+
+[node name="VictoriaMenu" type="Control" parent="MostrarVictoria" unique_id=718135565]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MostrarVictoria/VictoriaMenu" unique_id=1609778346]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="MostrarVictoria/VictoriaMenu" unique_id=238203068]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_4w22c")
+
+[node name="Reiniciar" type="Button" parent="MostrarVictoria/VictoriaMenu" unique_id=1859571800]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 515.0
+offset_right = 237.0
+offset_bottom = 546.0
+text = "REINICIAR"
+
+[node name="Menu" type="Button" parent="MostrarVictoria/VictoriaMenu" unique_id=74799719]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 515.0
+offset_right = 432.0
+offset_bottom = 546.0
+text = "MENU"
+
 [connection signal="pressed" from="GameOver/GameOverMenu/Reiniciar" to="GameOver" method="_on_reiniciar_pressed"]
 [connection signal="pressed" from="GameOver/GameOverMenu/Menu" to="GameOver" method="_on_menu_pressed"]
 [connection signal="pressed" from="MenuPausa/Continuar" to="MenuPausa" method="_on_continuar_pressed"]
 [connection signal="pressed" from="MenuPausa/Reiniciar" to="MenuPausa" method="_on_reiniciar_pressed"]
 [connection signal="pressed" from="MenuPausa/Volver" to="MenuPausa" method="_on_volver_pressed"]
+[connection signal="body_entered" from="Victoria" to="Victoria" method="_on_body_entered"]
+[connection signal="pressed" from="MostrarVictoria/VictoriaMenu/Reiniciar" to="MostrarVictoria" method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="MostrarVictoria/VictoriaMenu/Menu" to="MostrarVictoria" method="_on_menu_pressed"]

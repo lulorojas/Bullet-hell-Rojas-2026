@@ -11,6 +11,7 @@ var esta_muerto = false
 var recibiendo_danio = false
 var ataques_realizados = 0
 
+
 func _ready():
 	vida = 7
 	vida_max = 7
@@ -103,15 +104,11 @@ func morir():
 	await get_tree().create_timer(2.0).timeout
 	queue_free()
 
-func spawnear_secuaces(cantidad = 1):
-	for i in range(cantidad):
-		var secuaz = SECUAZ.instantiate()
-		get_parent().add_child(secuaz)
-
 func _on_timer_secuaces_timeout():
-	if esta_muerto:
+	if esta_muerto or mago == null:
 		return
-	var secuaces_activos = get_tree().get_nodes_in_group("secuaces").size()
-	if secuaces_activos >= 4:
-		return
-	spawnear_secuaces()
+	for i in 2:
+		var secuaz = SECUAZ.instantiate()
+		get_parent().add_child(secuaz) 
+		secuaz.global_position = global_position + Vector2(randf_range(-20, 20), randf_range(-20, 20))
+		secuaz.inicializar(mago)

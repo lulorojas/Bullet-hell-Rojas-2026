@@ -130,17 +130,26 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcin"]
 size = Vector2(60, 48)
 
-[node name="secuaz" type="Area2D" unique_id=1818095322 groups=["secuaces"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1u0k"]
+size = Vector2(67, 53)
+
+[node name="secuaz" type="CharacterBody2D" unique_id=508227518 groups=["secuaces"]]
 script = ExtResource("1_ugcin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1838574679]
-scale = Vector2(4, 4)
+scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_dn2qh")
 animation = &"danio"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1904559279 groups=["secuaces"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1904559279]
 position = Vector2(5, 6)
 shape = SubResource("RectangleShape2D_ugcin")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Area2D" type="Area2D" parent="." unique_id=1994868248 groups=["secuaces"]]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1511717186]
+position = Vector2(4.5, 5.5)
+shape = SubResource("RectangleShape2D_r1u0k")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

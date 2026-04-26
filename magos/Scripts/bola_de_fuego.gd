@@ -15,12 +15,8 @@ func _on_body_entered(cuerpo):
 	if cuerpo.is_in_group("enemigos") or  cuerpo.is_in_group("enemigos2"):
 		cuerpo.recibir_danio(1)
 	
-	
+	if cuerpo.is_in_group("secuaces") or  cuerpo.is_in_group("secuaztroll"):
+		cuerpo.morir()
 		
 	if cuerpo.is_in_group("enemigos") or cuerpo.is_in_group("obstaculos"):
 		queue_free()
-
-
-func _on_area_entered(area) -> void:
-	if area.is_in_group("secuaces"):
-		area.morir()
