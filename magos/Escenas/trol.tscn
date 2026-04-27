@@ -227,7 +227,7 @@ animations = [{
 size = Vector2(45, 81.71875)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5esp"]
-radius = 595.0412
+radius = 392.5099
 
 [node name="Trol" type="CharacterBody2D" unique_id=916524441]
 platform_floor_layers = 4294967294
