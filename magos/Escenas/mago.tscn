@@ -163,7 +163,6 @@ script = ExtResource("11_iegci")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1644495453]
 
 [node name="TimerDisparo" type="Timer" parent="." unique_id=1283153051]
-wait_time = 3.0
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=504149871]
